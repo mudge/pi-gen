@@ -342,7 +342,8 @@ follows:
 # Troubleshooting
 
 ## `64 Bit Systems`
-Please note there is currently an issue when compiling with a 64 Bit OS. See https://github.com/RPi-Distro/pi-gen/issues/271
+
+~~Please note there is currently an issue when compiling with a 64 Bit OS. See https://github.com/RPi-Distro/pi-gen/issues/271~~ This is fixed in this fork by [using the i386 base image of Debian](https://github.com/mudge/pi-gen/commit/670236b59c1be3d638b3b9884db13c180c56ebf0).
 
 ## `binfmt_misc`
 
