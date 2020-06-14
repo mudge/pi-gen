@@ -1,7 +1,18 @@
 # pi-gen
 
-_Tool used to create the raspberrypi.org Raspbian images_
+This is a fork of the [official tool used to create the raspberrypi.org Raspbian images](https://github.com/RPi-Distro/pi-gen) designed to set up a Raspberry Pi to:
 
+* [Be used for Time Machine backups](https://mudge.name/2019/11/12/using-a-raspberry-pi-for-time-machine/)
+* [Run an Unbound DNS sinkhole and DHCP server](https://mudge.name/2020/06/07/weeknotes-32/)
+* [Be an AirPlay receiver](https://github.com/mikebrady/shairport-sync)
+
+As with the original repository, it requires a `config` file with at least `IMG_NAME` set. In addition, it also requires `EXTERNAL_DRIVE_UUID` to be set to the UUID of the external hard drive hosting Time Machine backups.
+
+To make keeping up-to-date with upstream simple, it keeps the original `stage` directories intact but adds a new `mystage` directory. You can either place `SKIP` and `SKIP_IMAGE` files in the `stage3`, `stage4` and `stage5` directories or use the following config:
+
+```
+STAGE_LIST="stage0 stage1 stage2 mystage"
+```
 
 ## Dependencies
 
